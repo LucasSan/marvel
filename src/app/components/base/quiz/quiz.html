@@ -1,0 +1,33 @@
+<md-toolbar class="_md md-cyan-theme _md-toolbar-transitions">
+    <div class="md-toolbar-tools">
+        <h2>Marvel Quiz</h2>
+        <span flex="" class="flex"></span>
+        <a href="whatsapp://send?text={{marvel.score}}"><i class="material-icons">share</i></a>
+    </div>
+</md-toolbar>
+
+<div flex="50" flex-xs="100" class="flex-xs-100 flex-50">
+    <md-card class="_md md-cyan-theme">
+        <img src="{{marvel.imagePath}}" alt="Card Image">
+
+        <form name="marvel.marvelForm" novalidate ng-submit="marvel.marvelForm.$valid && marvel.submit()">
+            <md-card-content>
+                <md-input-container class="md-block ng-scope md-cyan-theme">
+                    <label for="input_90">What is the name of this Marvel Character ?</label>
+                    <div class="md-resize-wrapper">
+                        <input maxlength="100" type="text" class="md-input" id="input_88" ng-model="marvel.marvelForm.hero">
+                        <div class="md-resize-handle" style="touch-action: pan-y;"></div>
+                    </div>
+                    <div class="md-errors-spacer"></div>
+                </md-input-container>
+                <label id="lblscore">{{marvel.score}} pontos</label>
+            </md-card-content>
+
+            <md-card-actions layout="row" layout-align="end center" class="layout-align-end-center layout-row">                
+                <button class="md-button md-cyan-theme md-ink-ripple" type="button" ng-click="marvel.giveUp()">I give up, who is it ?</button>
+                <button class="md-button md-cyan-theme md-ink-ripple" type="button" ng-click="marvel.getMarvelImageArray()">Next</button>
+                <button class="md-primary md-button md-cyan-theme md-ink-ripple" type="submit">Answer</button>
+            </md-card-actions>
+        </form>
+    </md-card>
+</div>
