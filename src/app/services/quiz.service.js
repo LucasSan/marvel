@@ -6,6 +6,13 @@
         return request(urlAddress, 'GET');
       }
 
+      function checkAnswer(answer, name) {
+        if (answer === name) {
+          return true;
+        }
+        return false;
+      }
+
       function request(path, method) {
         const options = {
           method,
@@ -21,7 +28,8 @@
       }
 
       return {
-        getMarvelImage
+        getMarvelImage,
+        checkAnswer
       };
     });
 })();
