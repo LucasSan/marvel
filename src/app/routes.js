@@ -1,7 +1,7 @@
 (() => {
   const states = {
     base: [
-      buildStates('login', false, '/', 'src/app/components/base/quiz/quiz.html', 'MarvelListCtrl', 'marvel')
+      buildStates('main', false, '/', 'src/app/components/base/quiz/quiz.html', 'MarvelListCtrl', 'marvel')
     ]
   };
 
@@ -24,10 +24,6 @@
   function setTransitions($trace, $transitions) {
     $trace.enable('TRANSITION');
     $transitions.onStart({}, () => {
-      return true;
-    });
-
-    $transitions.onStart({ to: 'auth.**' }, () => {
       return true;
     });
   }

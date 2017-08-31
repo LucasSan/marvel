@@ -8,7 +8,8 @@
       },
       MESSAGES: {
         CORRECT: 'Acertou!',
-        WRONG: 'Errou!'
+        WRONG: 'Errou!',
+        ERROR: 'Ocorreu um erro, tente novamente!'
       }
     }));
 })();
