@@ -7,10 +7,7 @@
       }
 
       function checkAnswer(answer, name) {
-        if (answer === name) {
-          return true;
-        }
-        return false;
+        return answer === name;
       }
 
       function request(path, method) {
